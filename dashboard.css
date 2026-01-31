@@ -1,0 +1,496 @@
+.top-header {
+  width: 100%;
+  height: 90px; /* Urefu uliozoeleka wa Dashboard headers */
+  background-color: #28284b; /* Rangi ya giza inayoendana na sidebar */
+  display: flex;
+  justify-content: space-between; /* Inatupa nafasi kati ya logo, search na user profile */
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+span {
+  margin-left: 3rem;
+}
+span.brand-name {
+  color: white;
+  font-size: large;
+}
+
+.sub-name {
+  color: #b0b0b0;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+/* User Info Style */
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notifications {
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff4757;
+  color: white;
+  font-size: 0.6rem;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.user-info {
+  text-align: right;
+  color: white;
+  line-height: 1.2;
+}
+
+.user-info span {
+  font-size: 0.8rem;
+  color: #b0b0b0;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 70px);
+  background-color: #f4f4f4;
+  margin-top: 10px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #28284b;
+  color: white;
+  padding: 20px 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.progress-container {
+  margin-top: 20px;
+
+  font-size: 0.8rem;
+  color: #b0b0b0;
+}
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #3e3e5e;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #4b0082, #007bff);
+  border-radius: 10px;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  color: #ff4757; /* Rangi nyekundu kwa Logout */
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.logout-btn i {
+  margin-right: 10px;
+}
+
+.logout-btn:hover {
+  color: #ff6b81;
+  transform: translateX(5px);
+}
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 10px 0;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  color: #b0b0b0;
+  text-decoration: none;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #3e3e5e;
+  color: white;
+}
+
+.nav-links a i {
+  margin-right: 15px;
+  width: 20px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.content h1 {
+  margin-bottom: 20px;
+  color: #28284b;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 2rem;
+  color: #28284b;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.card p {
+  color: #666;
+}
+
+.recent-activity {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activity h2 {
+  margin-bottom: 15px;
+  color: #28284b;
+}
+
+.recent-activity ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-activity li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+}
+
+.recent-activity li:last-child {
+  border-bottom: none;
+}
+/*footer*/
+.dashboard-footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #7f8c8d;
+  font-size: 0.85rem;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #4b0082; /* Rangi ya Wakanda */
+  font-weight: 600;
+}
+
+.status-online {
+  color: #2ecc71; /* Kijani */
+  font-size: 0.6rem;
+  margin-right: 5px;
+}
+
+.version {
+  background: #eee;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+/* log book work place*/
+/* Logbook Form Container */
+.logbook-form {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.logbook-form h3 {
+  color: #28284b;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #3e3e5e;
+  display: inline-block;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Inputs and Textarea */
+.form-control,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-control:focus,
+textarea:focus {
+  border-color: #28284b;
+  outline: none;
+  box-shadow: 0 0 5px rgba(40, 40, 75, 0.2);
+}
+
+/* Button Styling */
+.btn-save {
+  background-color: #28284b;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-save:hover {
+  background-color: #3e3e5e;
+}
+/* log history place*/
+/* History Table Styling */
+.history-section {
+  margin-top: 20px;
+}
+
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.log-table th {
+  background-color: #28284b;
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+.log-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.log-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status-badge.pending {
+  background-color: #ffeaa7;
+  color: #d35400;
+}
+
+.status-badge.approved {
+  background-color: #55efc4;
+  color: #00b894;
+}
+/*supervisor section*/
+.supervisor-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.supervisor-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #28284b;
+}
+
+.supervisor-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.sup-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #28284b;
+}
+
+.sup-title h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #28284b;
+}
+
+.sup-title span {
+  font-size: 0.85rem;
+  color: #777;
+  margin-left: 0; /* Kurekebisha span margin yako ya awali */
+}
+
+.sup-body p {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.sup-body i {
+  width: 20px;
+  color: #28284b;
+}
+
+.btn-contact {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #28284b;
+  background: transparent;
+  color: #28284b;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-contact:hover {
+  background: #28284b;
+  color: white;
+}
+/* avatar image adjustment */
+.avatar,
+.sup-avatar {
+  width: 50px; /* Unaweza kubadilisha saizi hapa */
+  height: 50px;
+  border-radius: 50%; /* Hii ndiyo inafanya iwe duara */
+  object-fit: cover; /* Hii inazuia picha isijivute (stretch) */
+  border: 2px solid #28284b;
+}
+
+/* Kwa Supervisors, unaweza kuikuza kidogo */
+.sup-avatar {
+  width: 80px;
+  height: 80px;
+}
+/* settings section */
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.settings-card {
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.settings-card h3 {
+  margin-bottom: 20px;
+  color: #28284b;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
