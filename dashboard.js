@@ -104,3 +104,42 @@ document
       showSection("dashboard-section");
     }
   });
+// A. Function ya ku-update Profile (Jina na Email)
+document
+  .getElementById("profile-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const newName = document.getElementById("edit-name").value;
+    const newEmail = document.getElementById("edit-email").value;
+
+    // 1. Update jina kwenye Top Header papo hapo
+    document.querySelector(".user-info strong").textContent = newName;
+
+    // 2. Ongeza kwenye Recent Activity
+    addRecentActivity("Profile information updated");
+
+    alert("Profile imefanyiwa marekebisho!");
+  });
+
+// B. Function ya kubadilisha Password
+document
+  .getElementById("password-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const currentPass = document.getElementById("current-password").value;
+    const newPass = document.getElementById("new-password").value;
+
+    // Kwa sasa tuna-simulate tu (Simulation)
+    if (newPass.length < 6) {
+      alert("Nenosiri jipya lazima liwe na herufi zaidi ya 6!");
+      return;
+    }
+
+    // Ongeza kwenye Recent Activity
+    addRecentActivity("Security password changed");
+
+    alert("Nenosiri limebadilishwa kikamilifu!");
+    this.reset(); // Safisha fomu
+  });
