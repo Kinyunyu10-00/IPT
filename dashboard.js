@@ -18,3 +18,11 @@ function showSection(sectionId) {
     }
   });
 }
+//ongeza mwaka wa ipt wa sasa
+function setIptYear() {
+  const currentYear = new Date().getFullYear();
+  document.getElementById("ipt-year").textContent = currentYear;
+  document;
+}
+//weka mwaka wa ipt
+setIptYear();
